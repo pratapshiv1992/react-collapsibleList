@@ -12,10 +12,10 @@ const Item = ({hasSubMenus, item, onItemClick}) => {
         setOpen(!open);
     }
 
-    return <li key={`item-${item.menuId}`}>
+    return <li data-testid='item-root' key={`item-${item.menuId}`}>
         {
             hasSubMenus &&
-            <span onClick={onClick} className='listItem-caret'>
+            <span data-testid='caret-root' onClick={onClick} className='listItem-caret'>
                     <i className={open ? 'fa fa-caret-down' : 'fa fa-caret-right'}/>
                 </span>
         }

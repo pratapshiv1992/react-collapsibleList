@@ -3,7 +3,7 @@ import ListItem from "../ListItem";
 import './index.css'
 
 const CollapsibleList = ({data, customCss}) => {
-    return <ul className={`collapsible-list ${customCss}`}>
+    return <ul data-testid='collapsible-list-root' className={`collapsible-list ${customCss}`}>
         <ListItem data={data}/>
     </ul>
 }
