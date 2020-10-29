@@ -12,7 +12,7 @@ const Item = ({hasSubMenus, item, onItemClick}) => {
         setOpen(!open);
     }
 
-    return <li data-testid='item-root' key={`item-${item.menuId}`}>
+    return <li data-testid={`item-root-${item.menuId}`} key={`item-${item.menuId}`}>
         {
             hasSubMenus &&
             <span data-testid='caret-root' onClick={onClick} className='listItem-caret'>
@@ -21,7 +21,7 @@ const Item = ({hasSubMenus, item, onItemClick}) => {
         }
         <a href={item.urlString} target='_blank' alt='data_missing'><span
             className={hasSubMenus ? '' : 'listItem'}>{item.name}</span></a>
-        {hasSubMenus && <List data={item.subMenus} open={open}/>}
+        {hasSubMenus && <List id={`list-root-${item.menuId}`} data={item.subMenus} open={open}/>}
     </li>
 }
 
