@@ -19,7 +19,8 @@ const Item = ({hasSubMenus, item, onItemClick}) => {
                     <i className={open ? 'fa fa-caret-down' : 'fa fa-caret-right'}/>
                 </span>
         }
-        <span className={hasSubMenus ? '' : 'listItem'}>{item.name}</span>
+        <a href={item.urlString} target='_blank' alt='data_missing'><span
+            className={hasSubMenus ? '' : 'listItem'}>{item.name}</span></a>
         {hasSubMenus && <List data={item.subMenus} open={open}/>}
     </li>
 }
