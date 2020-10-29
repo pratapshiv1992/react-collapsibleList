@@ -4,8 +4,7 @@ import List from '../components/List'
 import {listData} from "../mockData";
 
 describe('render List component', () => {
-    const clonnedListData = JSON.parse(JSON.stringify(listData));
-    const {getByTestId} = render(<List data={clonnedListData} open={true}/>);
+    const {getByTestId} = render(<List data={listData} open={true}/>);
     test('test List component', () => {
         const itemElement1 = getByTestId('item-root-1');
         expect(itemElement1).toBeInTheDocument();
