@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from '@testing-library/react';
 import CollapsibleList from '../components/CollapsibleList'
-import List from '../components/List'
 import {listData} from "../mockData";
 
 describe('render CollapsibleList component', () => {
