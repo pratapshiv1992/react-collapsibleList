@@ -5,3 +5,9 @@
 ul {
     font-weight: 600;
 }
+
+.customCss {
+    width: 400px;
+    background: #efe7e0b5;
+    height: 250px;
+}

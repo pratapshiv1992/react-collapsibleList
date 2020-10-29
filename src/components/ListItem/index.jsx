@@ -3,9 +3,12 @@ import List from '../List'
 import './index.css'
 
 
-const Item = ({hasSubMenus, item}) => {
+const Item = ({hasSubMenus, item, onItemClick}) => {
     const [open, setOpen] = useState(true);
     const onClick = (e) => {
+        if (typeof onItemClick === 'function') {
+            onItemClick(e, item);
+        }
         setOpen(!open);
     }
 
@@ -21,13 +24,13 @@ const Item = ({hasSubMenus, item}) => {
     </li>
 }
 
-const ListItem = ({data = []}) => {
+const ListItem = ({onItemClick, data = []}) => {
     return data.map((item, key) => {
         let hasSubMenus = false;
         if (!!item.subMenus && Array.isArray(item.subMenus)) {
             hasSubMenus = true;
         }
-        return <Item hasSubMenus={hasSubMenus} item={item} key={`item--${key}`}/>
+        return <Item key={`item--${key}`} hasSubMenus={hasSubMenus} item={item} onItemClick={onItemClick}/>
     })
 
 }
