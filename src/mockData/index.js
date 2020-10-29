@@ -7,7 +7,7 @@ export const listData = [{
         menuId: 2,
         name: 'Getting started',
         tooltip: null,
-        urlString: 'www.google.com'
+        urlString: 'www.google.com',
     },
         {
             menuId: 3,

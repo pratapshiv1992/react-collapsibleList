@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import CollapsibleList from './components/CollapsibleList'
+import CollapsibleList from './components/CollapsibleList/index'
 import {listData} from './mockData';
 
 export default function App() {

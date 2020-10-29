@@ -1,0 +1,9 @@
+.hide-list {
+    height: 0;
+    overflow: hidden;
+    -prefix-animation: slide 1s ease 3.5s forwards;
+}
+
+.list {
+    list-style-type: circle;
+}
